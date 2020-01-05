@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
-import { Card, Text } from 'react-native-elements'
+import { Card, Text } from 'react-native-elements';
 
 class Contact extends Component {
     static navigationOptions = {
@@ -10,7 +10,7 @@ class Contact extends Component {
         return (<ScrollView>
             <Card wrapperStyle={{ margin: 20 }}
                 title="Contact Information">
-                <Text Style= {{marginBottom: 10}}>
+                <Text Style={{ marginBottom: 10 }}>
                     1 Nucamp Way {"\n"}
                     Seattle, WA 98001 {"\n"}
                     U.S.A. {"\n"}</Text>

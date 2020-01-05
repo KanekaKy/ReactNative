@@ -77,9 +77,9 @@ const ContactNavigator = createStackNavigator(
 const MainNavigator = createDrawerNavigator(
     {
         Home: { screen: HomeNavigator },
-        About: {screen: AboutNavigator},
-        Contact: {screen: ContactNavigator},
-        Directory: { screen: DirectoryNavigator }
+        Directory: { screen: DirectoryNavigator },
+        About: { screen: AboutNavigator },
+        Contact: { screen: ContactNavigator },
     },
     {
         drawerBackgroundColor: '#CEC8FF'
