@@ -11,7 +11,7 @@ function RenderCampsite(props) {
             <Card
                 featuredTitle={campsite.name}
                 image={require('./images/react-lake.jpg')}>
-                <Text style={{margin: 10}}>
+                <Text style={{ margin: 10 }}>
                     {campsite.description}
                 </Text>
                 <Icon
@@ -20,7 +20,7 @@ function RenderCampsite(props) {
                     color='#f50'
                     raised
                     reverse
-                    onPress={() => props.favorite ? 
+                    onPress={() => props.favorite ?
                         console.log('Already set as a favorite') : props.markFavorite()}
                 />
             </Card>
@@ -61,7 +61,7 @@ class CampsiteInfo extends Component {
         };
     }
     markFavorite() {
-        this.setState({favorite: true});
+        this.setState({ favorite: true });
     }
 
     static navigationOptions = {
