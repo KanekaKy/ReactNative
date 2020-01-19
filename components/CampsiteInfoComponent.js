@@ -24,10 +24,13 @@ const mapDispatchToProps = {
 };
 
 function RenderCampsite(props) {
+
     const {campsite} = props;
 
     handleViewRef = ref => this.view = ref;
+
     const recognizeDrag = ({ dx }) => (dx < -200) ? true : false;
+    const recognizeComment = ({ dx }) => (dx > 200) ? true : false;
     const panResponder = PanResponder.create({
         onStartShouldSetPanResponder: () => true,
         onPanResponderGrant: () => {
@@ -36,6 +39,7 @@ function RenderCampsite(props) {
         },
         onPanResponderEnd: (e, gestureState) => {
             console.log('pan responder end', gestureState);
+            //if recognize comment gesture state
             if (recognizeDrag(gestureState)) {
                 Alert.alert(
                     'Add Favorite',
@@ -54,6 +58,10 @@ function RenderCampsite(props) {
                     ],
                     { cancelable: false }
                 );
+            } 
+            
+            if (recognizeComment(gestureState)){
+                props.onShowModal();
             }
             return true;
         }

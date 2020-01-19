@@ -14,6 +14,7 @@ import { fetchCampsites, fetchComments, fetchPromotions,
     fetchPartners } from '../redux/ActionCreators';
 import Reservation from './ReservationComponent';
 import Favorites from './FavoritesComponent';
+console.disableYellowBox =true;
 
 const mapDispatchToProps = {
     fetchCampsites,
